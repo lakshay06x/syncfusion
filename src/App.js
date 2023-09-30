@@ -1,23 +1,19 @@
-import logo from './logo.svg';
+import React from "react";
 import './App.css';
-
+import Spreadsheet1 from "./component/spreadsheet1";
+import Spreadsheet2 from "./component/spreadsheet2";
+import Finalchart from "./component/finalchart";
+import { registerLicense } from "@syncfusion/ej2-base";
+registerLicense(
+  "Ngo9BigBOggjHTQxAR8/V1NHaF5cXmtCf1NpR2pGfV5yd0VHal1UTnJZUj0eQnxTdEZjUH1XcXFRRGBVVER+Wg=="
+);
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Spreadsheet1 />
+      <Spreadsheet2/>
+      <Finalchart/>
+      
     </div>
   );
 }
