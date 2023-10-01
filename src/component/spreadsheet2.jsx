@@ -32,37 +32,41 @@ function Spreadsheet() {
   }, []);
 
   return (
-    <div className="s2">
-      <h3>Calculated Data</h3>
-      <SpreadsheetComponent
-        allowOpen={true}
-        openUrl="https://ej2services.syncfusion.com/production/web-services/api/spreadsheet/open"
-        allowSave={true}
-        saveUrl="https://ej2services.syncfusion.com/production/web-services/api/spreadsheet/save"
-        sheets={[
-          {
-            rows: [
-              {
-                index: 0,
-                cells: [
-                  { index: 0, value: "SNO." },
-                  { index: 1, value: "Average" },
-                  { index: 2, value: "Difference" },
-                ],
-              },
-              ...defaultData.map((item) => ({
-                index: parseInt(item["SNO."]),
-                cells: [
-                  { index: 0, value: item["SNO."] },
-                  { index: 1, value: averageValues[item["SNO."]] || "" },
-                  { index: 2, value: differenceValues[item["SNO."]] || "" },
-                ],
-              })),
-            ],
-          },
-        ]}
-      ></SpreadsheetComponent>
-    </div>
+
+    <div className="container">
+      
+      <div className="s2">
+    <h3 id="br">Calculated Data</h3>
+    <SpreadsheetComponent
+      allowOpen={true}
+      openUrl="https://ej2services.syncfusion.com/production/web-services/api/spreadsheet/open"
+      allowSave={true}
+      saveUrl="https://ej2services.syncfusion.com/production/web-services/api/spreadsheet/save"
+      sheets={[
+        {
+          rows: [
+            {
+              index: 0,
+              cells: [
+                { index: 0, value: "SNO." },
+                { index: 1, value: "Average" },
+                { index: 2, value: "Difference" },
+              ],
+            },
+            ...defaultData.map((item) => ({
+              index: parseInt(item["SNO."]),
+              cells: [
+                { index: 0, value: item["SNO."] },
+                { index: 1, value: averageValues[item["SNO."]] || "" },
+                { index: 2, value: differenceValues[item["SNO."]] || "" },
+              ],
+            })),
+          ],
+        },
+      ]}
+    ></SpreadsheetComponent>
+  </div></div>
+    
   );
 }
 export default Spreadsheet;

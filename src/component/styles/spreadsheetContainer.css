@@ -1,0 +1,7 @@
+@import url("https://cdn.syncfusion.com/ej2/bootstrap5.css");
+.spreadsheetContainer{
+    display: grid;
+   
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50%;
+}

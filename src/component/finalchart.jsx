@@ -13,7 +13,7 @@ const data = [
 function Finalchart() {
   return (
     <div className="chart">
-      <h3>Bar Chart For Calculated Data</h3>
+      <h3 id="cr">Bar Chart For Calculated Data</h3>
       <BarChart data={data} />
     </div>
   );

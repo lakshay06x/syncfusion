@@ -12,8 +12,10 @@ import { defaultData } from "../data";
 
 function Spreadsheet() {
   return (
-    <div className="s1">
-    <h3>Sheet For Data Entry</h3>
+    <div className="container">
+      
+      <div className="s1">
+    <h3 id="ar">Sheet For Data Entry</h3>
       <SpreadsheetComponent
         allowOpen={true}
         openUrl="https://ej2services.syncfusion.com/production/web-services/api/spreadsheet/open"
@@ -30,6 +32,8 @@ function Spreadsheet() {
         </SheetsDirective>
       </SpreadsheetComponent>
     </div>
+    </div>
+    
   );
 }
 export default Spreadsheet;

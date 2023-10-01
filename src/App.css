@@ -1,6 +1,67 @@
 @import url("https://cdn.syncfusion.com/ej2/bootstrap5.css");
 .App{
-    margin: 2%;
+    /* margin: 2%;
     margin-top: 3%;
-    margin-bottom: 10% ;
+    margin-bottom: 10% ; */
+    /* background-color: #f8f9fa; */
+    background-color: #f1f1f1;
+    height: 100%;
+    margin: 5%;
+    display: grid;
+   
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50%;
+    grid-template-areas: 
+    "s1 s2"
+    "cr cr";
+   
+    
+
 }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Header styles */
+.header {
+    background-color: #0d6efd; /* Background color for the header */
+    color: #fff; /* Text color */
+    padding: 20px; /* Padding around the header content */
+    display: flex; /* Display as a flex container to align items horizontally */
+    align-items: center; /* Center items vertically */
+    
+  }
+  
+  /* Company tag styles */
+  .company-tag {
+    font-size: 24px; /* Font size for the company tag */
+    color: white; /* Text color for the company name */
+    font-size: 30px;
+    margin-right: 20px; /* Add some space between the company tag and search box */
+    font-family: 'Nunito';
+    font-size: 30px;
+    text-shadow: 2px 2px black;
+  }
+  
+  /* Search box styles */
+  .search-box {
+    /* height: 40px; */
+    width: 70px;
+    padding: 10px; /* Padding inside the search box */
+    border: 2px solid black; /* Remove the border */
+    border-radius: 5px; /* Add some border radius for a rounded look */
+    width: 200px; /* Set a fixed width for the search box */
+    margin-left: auto;
+  }
+  
+
+  #img{
+
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+  }
+
+
+ 
