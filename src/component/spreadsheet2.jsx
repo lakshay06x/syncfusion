@@ -30,43 +30,41 @@ function Spreadsheet() {
     setAverageValues(avgValues);
     setDifferenceValues(diffValues);
   }, []);
-
+  
   return (
-
     <div className="container">
-      
       <div className="s2">
-    <h3 id="br">Calculated Data</h3>
-    <SpreadsheetComponent
-      allowOpen={true}
-      openUrl="https://ej2services.syncfusion.com/production/web-services/api/spreadsheet/open"
-      allowSave={true}
-      saveUrl="https://ej2services.syncfusion.com/production/web-services/api/spreadsheet/save"
-      sheets={[
-        {
-          rows: [
+        <h3 id="br">Calculated Data</h3>
+        <SpreadsheetComponent className="comp" showSheetTabs={false} showRibbon={false} showFormulaBar={false}
+          sheets={[
             {
-              index: 0,
-              cells: [
-                { index: 0, value: "SNO." },
-                { index: 1, value: "Average" },
-                { index: 2, value: "Difference" },
+              
+              // frozenColumns: 2,
+              // frozenRows: 2,
+              isProtected: true,
+              rows: [
+                {
+                  index: 0,
+                  cells: [
+                    { index: 0, value: "SNO.",style: {backgroundColor: "#808080"} },
+                    { index: 1, value: "Average", style: {backgroundColor: "#808080"} },
+                    { index: 2, value: "Difference", style: {backgroundColor: "#808080"} },
+                  ],
+                },
+                ...defaultData.map((item) => ({
+                  index: parseInt(item["SNO."]),
+                  cells: [
+                    { index: 0, value: item["SNO."], style: {backgroundColor: "#808080"} },
+                    { index: 1, value: averageValues[item["SNO."]] || "" , style: {backgroundColor: "#FFCC99"}},
+                    { index: 2, value: differenceValues[item["SNO."]] || "" , style: {backgroundColor: "#FFCC99"}},
+                  ],
+                })),
               ],
             },
-            ...defaultData.map((item) => ({
-              index: parseInt(item["SNO."]),
-              cells: [
-                { index: 0, value: item["SNO."] },
-                { index: 1, value: averageValues[item["SNO."]] || "" },
-                { index: 2, value: differenceValues[item["SNO."]] || "" },
-              ],
-            })),
-          ],
-        },
-      ]}
-    ></SpreadsheetComponent>
-  </div></div>
-    
+          ]}
+        ></SpreadsheetComponent>
+      </div>
+    </div>
   );
 }
 export default Spreadsheet;

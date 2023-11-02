@@ -1,26 +1,32 @@
 @import url("https://cdn.syncfusion.com/ej2/bootstrap5.css");
-.s1{
-
-    margin: 2%;
-    margin-top: 5%;
-    margin-bottom: 5% ;
-    background-color: white;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-bottom: 2rem;
-    /* border: 1px solid black; */
-    box-shadow: -5px 10px 18px #888888;
-    grid-area: s1;
-    
-    
-
+.s1 {
+  margin: 2%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  background-color: white;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 2rem;
+  /* border: 1px solid black; */
+  box-shadow: -5px 10px 18px #888888;
+  grid-area: s1;
 }
-#ar{
-
-    margin: 10px;
-    font-size: 20px;
-    text-align: center;
-    padding: 10px;
-    text-decoration: underline;
-    
+#ar {
+  margin: 10px;
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
+  text-decoration: underline;
+}
+.e-row-header {
+  display: none;
+}
+.e-header-cell {
+  display: none;
+}
+.e-selectall {
+  display: none;
+}
+.e-scrollbar {
+  display: none;
 }
